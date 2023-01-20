@@ -1,6 +1,6 @@
 :root {
-  --g1: rgb(94, 62, 31);
-  --g2: rgb(233, 200, 234);
+  --g1: rgb(255, 255, 255);
+  --g2: rgb(255, 255, 255);
 }
 
 @keyframes background-pan {
@@ -130,7 +130,7 @@ body.toggled > #heart {
 
 #hutao {
   background-image: url('../../public/assets/album/hutao.jpg');
-  opacity: 0.7;
+  opacity: 1;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

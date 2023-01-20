@@ -8,11 +8,11 @@ const LeftSlide = () => {
   return (
     <div
       id="left-side"
-      className="flex h-screen basis-[30%] items-center justify-center shadow-2xl"
+      className="flex h-screen basis-[30%] items-center justify-center shadow-2xl border-r-4 border-gray-900"
     >
       <div
         id="round-hole"
-        className="absolute top-[25%] h-[20rem] w-[20rem] overflow-hidden rounded-full bg-gradient-to-r from-black to-gray-800 ring-4 ring-black"
+        className="absolute top-[25%] h-[20rem] w-[20rem] overflow-hidden rounded-full bg-gradient-to-r from-gray-900 to-gray-700 ring-4 ring-black"
       ></div>
       <div id="strings" className="absolute top-8 flex h-screen gap-8">
         <Player />
@@ -29,7 +29,7 @@ const LeftSlide = () => {
           role={5}
         />
       </div>
-      <div className="absolute bottom-0 left-[24rem] ring-2 ring-black">
+      <div className="absolute bottom-0 left-[24rem] ring-2 ring-gray-900 rounded-lg overflow-hidden">
         <img src={hutaoGif} alt="this slowpoke moves" width="200" />
       </div>
     </div>

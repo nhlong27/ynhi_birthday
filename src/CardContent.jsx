@@ -12,11 +12,11 @@ const CardContent = ({key, content, name, imgSrc}) => {
       //   e.stopPropagation();
       //   setCardState((state) => !state);
       // }}
-      className={`ring-offset-[rgb(233, 200, 234)] min-h-[10rem] w-[37rem] overflow-hidden rounded-lg bg-yellow-500 bg-opacity-70 ring-4 ring-orange-800 ring-offset-2 transition-all duration-500`}
+      className={`ring-offset-[rgb(233, 200, 234)] min-h-[10rem] w-[37rem] overflow-hidden rounded-lg bg-gradient-to-r from-pink-100 to-white hover:from-pink-200 hover:opacity-100 ring-4 ring-gray-900 opacity-80 ring-offset-2 transition-all duration-500 shadow-2xl`}
     >
       <div className="card-content flex">
         <div className={`card-image h-[100%] ${imgStyle} transition-all duration-1000`}>
-          <img src={imgSrc} alt="logo" />
+          <img src={imgSrc} className='rounded-lg ring-2 ring-gray-900' alt="logo" />
         </div>
         <div className={`${infoStyle} card-info   overflow-hidden`}>
           <div className={` card-info-title `}>

@@ -11,11 +11,11 @@ const Player = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   console.log({trackNumber})
   return (
-    <div className="absolute -top-6 -left-[6rem] flex h-[1.5rem] w-[25rem]  rounded-2xl overflow-hidden px-4 text-[16px] normal-case text-cyan-600 ring-2 ring-black">
+    <div className="absolute -top-6 -left-[6rem] flex h-[1.5rem] w-[25rem]  rounded-2xl overflow-hidden px-4 text-[16px] normal-case text-cyan-600 ring-2 ring-black bg-pink-100">
       <span className="font-extrabold italic text-black">
         {' '}
         <span className="tracking-wider  text-black">
-          {isPlaying ? 'Now playing...' : 'Paused'}
+          {isPlaying ? 'Now playing...' : 'Paused - '}
         </span>{' '}
         {tracks[trackNumber][0]}
       </span>
