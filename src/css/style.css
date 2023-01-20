@@ -1,0 +1,170 @@
+:root {
+  --g1: rgb(94, 62, 31);
+  --g2: rgb(233, 200, 234);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+body {
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+  background-size: 200%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px;
+}
+
+body.toggled {
+  animation: none;
+}
+
+body.toggled > #title {
+  opacity: 0;
+}
+
+body.toggled > #icon {
+  opacity: 1;
+}
+body.toggled > #background {
+  opacity: 0;
+  z-index: 0;
+}
+body.toggled > #root {
+  opacity: 100;
+}
+
+body.toggled > #tiles > .tile:hover {
+  opacity: 0.1 !important;
+
+}
+body.toggled > #tiles > .tile {
+  z-index: 1
+
+}
+body.toggled > #tiles {
+  z-index: 1;
+}
+body.toggled > #heart {
+  opacity: 0;
+  /* z-index: ; */
+}
+
+.centered {
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#tiles {
+  height: calc(100vh - 1px);
+  width: calc(100vw - 1px);
+  position: relative;
+  z-index: 9;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  opacity: 0.7;
+}
+
+.tile {
+  cursor: pointer;
+  position: relative;
+}
+
+.tile:hover:before {
+  background-color: rgb(30, 30, 30);
+}
+
+.tile:before {
+  background-color: rgb(15, 15, 15);
+  content: '';
+  inset: 0.5px;
+  position: absolute;
+}
+
+#title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 6vw;
+  margin: 0px;
+  pointer-events: none;
+  transition: opacity 1200ms ease;
+  width: 50vw;
+  z-index: 10;
+}
+
+#title > .fancy {
+  color: var(--g2);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
+  line-height: 0.9em;
+}
+
+#background {
+  background-image: url('../../public/assets/cover-modified.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 220vh;
+  z-index: 8;
+  opacity: 1;
+  transition: opacity 1200ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#root {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1200ms ease;
+}
+
+#hutao {
+  background-image: url('../../public/assets/album/hutao.jpg');
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: inherit;
+}
+
+#left-side {
+  background-image: url('../../public/assets/album/wood-texture.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#right-side {
+  z-index: 2;
+}
+#round-hole {
+  z-index: 3;
+}
+#strings {
+  z-index: 4;
+}
+
+#heart {
+  background-image: url('../../public/assets/heart.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Rubik', sans-serif;
+  /* font-size: 6vw; */
+  margin: 0px;
+  pointer-events: none;
+  transition: opacity 1200ms ease;
+  width: 20vw;
+  height: 10vw;
+  z-index: 11;
+}
