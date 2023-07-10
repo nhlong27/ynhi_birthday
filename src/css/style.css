@@ -95,7 +95,7 @@ body.toggled > #heart {
 #title {
   font-family: 'Rubik', sans-serif;
   font-size: 6vw;
-  margin: 0px;
+  margin-bottom: 20px;
   pointer-events: none;
   transition: opacity 1200ms ease;
   width: 50vw;
@@ -110,8 +110,9 @@ body.toggled > #heart {
 }
 
 #background {
-  background-image: url('../../public/assets/cover-modified.jpg');
-  background-size: cover;
+  background-image: url('../../public/assets/cover2-modified.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 220vh;
   z-index: 8;
@@ -119,8 +120,12 @@ body.toggled > #heart {
   transition: opacity 1200ms ease;
   position: absolute;
   top: 0;
+  right: 0;
   left: 0;
+  bottom: 0;
+
 }
+
 
 #root {
   z-index: 1;
